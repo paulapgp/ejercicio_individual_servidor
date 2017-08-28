@@ -10,9 +10,11 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using servidor.Modelo;
 using servidor.Models;
+using System.Web.Http.Cors;
 
 namespace servidor.Controllers
 {
+    [EnableCors(origins: "http://localhost:8080", headers: "*", methods: "*")]
     public class EntradasController : ApiController
     {
         private ApplicationDbContext db = new ApplicationDbContext();
